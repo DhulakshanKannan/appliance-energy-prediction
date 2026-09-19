@@ -5,47 +5,49 @@ data (temperature, humidity, weather, time-based features) with an LSTM deep lea
 
 ## Project Structure
 
-├── data/
-│ ├── raw/ # Original dataset
-│ └── processed/ # Cleaned, scaled, feature-engineered datasets
-├── notebooks/
-│ ├── 01_EDA.ipynb # Exploratory Data Analysis & Preprocessing
-│ ├── 02_Feature_Engineering.ipynb # Time-based, rolling, lag, interaction features
-│ └── 03_Modeling.ipynb # Baseline models, LSTM, tuning, evaluation
-├── models/
-│ ├── trained_model.h5 # Final trained LSTM model
-│ ├── feature_scaler.pkl # Scaler for input features
-│ └── target_scaler.pkl # Scaler for the target variable (Appliances)
-├── reports/
-│ └── report.pdf # Full write-up (see Documentation section)
-├── requirements.txt
-└── README.md
-
+```
+appliance-energy-prediction/
+|-- data/
+|   |-- raw/              # Original dataset
+|   \-- processed/        # Cleaned, scaled, feature-engineered datasets
+|-- notebooks/
+|   |-- 01_EDA.ipynb                  # Exploratory Data Analysis & Preprocessing
+|   |-- 02_Feature_Engineering.ipynb  # Time-based, rolling, lag, interaction features
+|   \-- 03_Modeling.ipynb             # Baseline models, LSTM, tuning, evaluation
+|-- models/
+|   |-- trained_model.h5      # Final trained LSTM model
+|   |-- feature_scaler.pkl    # Scaler for input features
+|   \-- target_scaler.pkl     # Scaler for the target variable (Appliances)
+|-- reports/
+|   \-- report.pdf            # Full write-up (see Documentation section)
+|-- requirements.txt
+\-- README.md
+```
 
 ## Setup Instructions
 
 1. Clone the repository:
-```bash
+   ```bash
    git clone https://github.com/DhulakshanKannan/appliance-energy-prediction.git
    cd appliance-energy-prediction
-```
+   ```
 
 2. Create and activate a virtual environment:
-```bash
+   ```bash
    python -m venv venv
    venv\Scripts\activate   # Windows
-```
+   ```
 
 3. Install dependencies:
-```bash
+   ```bash
    pip install -r requirements.txt
-```
+   ```
 
 4. Run the notebooks in order:
-```bash
+   ```bash
    jupyter notebook
-```
-   Open and run `01_EDA.ipynb` → `02_Feature_Engineering.ipynb` → `03_Modeling.ipynb`
+   ```
+   Open and run `01_EDA.ipynb` -> `02_Feature_Engineering.ipynb` -> `03_Modeling.ipynb`
 
 ## Approach Summary
 
